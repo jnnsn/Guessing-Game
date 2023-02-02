@@ -20,14 +20,18 @@
 let randomNumber = (Math.floor(Math.random() * 100) + 1);
 let guessButton = document.getElementById("guessButton");
 let div3Results = document.getElementById("div3Results");
+
 let tries = 5
+
 
 console.log(guessButton)
 guessButton.addEventListener("click", function(){
     let numberInput = document.getElementById("numberInput").value;  
     console.log(randomNumber)
+    let tryAttempts = document.getElementById("tryAttempts");
 
     if (tries > 0){
+        tryAttempts.innerHTML = `You entered: ${numberInput}`
         if (numberInput == randomNumber){
             div3Results.innerHTML = "You got it right!";
         }
@@ -44,4 +48,19 @@ guessButton.addEventListener("click", function(){
     
 });
 
+// let try1 = document.getElementById("try1");
+// let try2 = document.getElementById("try2");
+// let try3 = document.getElementById("try3");
+// let try4 = document.getElementById("try4");
+// let try5 = document.getElementById("try5");
+
+// try1.document.getElementById("numberInput").addEventListener("click", function(){
+//     if (tries < 2){
+//         try1.innerHTML = `${numberInput}`
+//     }
+//     else if (tries < 3 && tries > 1){
+//         try2.innerHTML = `${numberInput}`
+//     }
+//     return number;
+// }); 
 
